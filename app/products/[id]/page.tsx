@@ -3,6 +3,11 @@ import { notFound } from "next/navigation"
 import Image from "next/image"
 import ProductDetails from "@/components/product-details"
 import RelatedProducts from "@/components/related-products"
+export function generateStaticParams() {
+  return products.map((product) => ({
+    id: product.id,
+  }));
+}
 
 
 export default function ProductPage({ params }: { params: { id: string } }) {
