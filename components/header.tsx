@@ -33,7 +33,7 @@ export default function Header() {
         <img
         src="/LOGO SMILE PARA WEB.png"
         alt="Aniversario Smile"
-        className="w-16 h-24 object-contain"
+        className="w-50 h-20 object-contain"
       />
 </Link>
           {/* Desktop Navigation */}

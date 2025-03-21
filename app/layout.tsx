@@ -11,9 +11,12 @@ import Link from "next/link"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "SMILE - Ropa y Pósters",
+  title: "SMILE MERCH - Merch de tus artistas favoritos",
   description: "Polos y pósters de calidad de la marca SMILE",
-    generator: 'v0.dev'
+    generator: 'v0.dev',
+    icons: {
+      icon: "/minilogitosmile.png", // Asegúrate de que este archivo está en la carpeta public/
+    },
 }
 
 export default function RootLayout({
@@ -61,3 +64,4 @@ export default function RootLayout({
 
 
 import './globals.css'
+import { icons } from "lucide-react"
