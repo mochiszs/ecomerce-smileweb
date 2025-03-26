@@ -2,6 +2,10 @@ import { products } from "@/lib/products"
 import ProductGrid from "@/components/product-grid"
 import ProductFilters from "@/components/product-filters"
 import { Suspense } from "react"
+import Script from "next/script"
+
+
+
 
 export default function ProductsPage({
   searchParams,
@@ -70,4 +74,3 @@ export default function ProductsPage({
     </div>
   )
 }
-
