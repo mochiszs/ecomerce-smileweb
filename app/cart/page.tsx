@@ -39,11 +39,11 @@ export default function CartPage() {
   const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0)
 
   // Calcular descuento si se aplica el cupón
-  const discount = discountApplied ? subtotal * 0.05 : 0
+  const discount = discountApplied ? subtotal * 0.15 : 0
   const total = subtotal - discount
 
   const applyCoupon = () => {
-    if (couponCode.toUpperCase() === "SMILEWEB") {
+    if (couponCode.toUpperCase() === "SMILEPROMO15") {
       setDiscountApplied(true)
     } else {
       alert("Código de cupón inválido")
@@ -81,7 +81,7 @@ ${orderItems}
     // Añadir información de descuento si se aplicó
     if (discountApplied) {
       message += `
-*Descuento (5%):* -S/ ${discount.toFixed(2)}
+*Descuento (15%):* -S/ ${discount.toFixed(2)}
 *Total con descuento:* S/ ${total.toFixed(2)}`
     } else {
       message += `
@@ -282,7 +282,7 @@ Referencia: ${formData.reference || "No especificada"}
                       </Button>
                     </div>
                     {discountApplied && (
-                      <p className="text-xs text-green-500 mt-1">¡Cupón SMILEWEB aplicado! 5% de descuento</p>
+                      <p className="text-xs text-green-500 mt-1">¡Cupón SMILEPROMO15 aplicado! 15% de descuento</p>
                     )}
                   </div>
 
@@ -294,7 +294,7 @@ Referencia: ${formData.reference || "No especificada"}
 
                     {discountApplied && (
                       <div className="flex justify-between text-green-500">
-                        <span>Descuento (5%)</span>
+                        <span>Descuento (15%)</span>
                         <span>-S/ {discount.toFixed(2)}</span>
                       </div>
                     )}

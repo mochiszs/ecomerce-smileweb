@@ -58,7 +58,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
   const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0)
 
   // Calcular descuento si se aplica el cupón
-  const discount = discountApplied ? subtotal * 0.05 : 0
+  const discount = discountApplied ? subtotal * 0.15 : 0
   const total = subtotal - discount
 
   const handleCheckout = () => {
@@ -66,7 +66,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
   }
 
   const applyCoupon = () => {
-    if (couponCode.toUpperCase() === "SMILEWEB") {
+    if (couponCode.toUpperCase() === "SMILEPROMO15") {
       setDiscountApplied(true)
     } else {
       alert("Código de cupón inválido")
@@ -94,7 +94,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
     // Añadir información de descuento si se aplicó
     if (discountApplied) {
-      message += `\n*Descuento (5%):* -S/ ${discount.toFixed(2)}`
+      message += `\n*Descuento (15%):* -S/ ${discount.toFixed(2)}`
       message += `\n*Total con descuento:* S/ ${total.toFixed(2)}`
     }
 
@@ -267,7 +267,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
                 {discountApplied && (
                   <div className="flex justify-between mb-1 text-green-500">
-                    <span>Descuento (5%)</span>
+                    <span>Descuento (15%)</span>
                     <span>-S/ {discount.toFixed(2)}</span>
                   </div>
                 )}
@@ -377,7 +377,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                     </Button>
                   </div>
                   {discountApplied && (
-                    <p className="text-xs text-green-500 mt-1">¡Cupón SMILEWEB aplicado! 5% de descuento</p>
+                    <p className="text-xs text-green-500 mt-1">¡Cupón SMILEPROMO15 aplicado! 15% de descuento</p>
                   )}
                 </div>
 
@@ -388,7 +388,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
                 {discountApplied && (
                   <div className="flex justify-between mb-2 text-green-500">
-                    <span>Descuento (5%)</span>
+                    <span>Descuento (15%)</span>
                     <span>-S/ {discount.toFixed(2)}</span>
                   </div>
                 )}
