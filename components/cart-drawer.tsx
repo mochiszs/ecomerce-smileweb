@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import { useCart } from "@/lib/use-cart"
 
+
 interface CartDrawerProps {
   isOpen: boolean
   onClose: () => void
@@ -84,6 +85,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
       return
     }
 
+
     // Format cart items for WhatsApp message
     const itemsText = cart
       .map((item) => `*${item.name}* (${item.size}) x${item.quantity} - S/ ${(item.price * item.quantity).toFixed(2)}`)
@@ -98,11 +100,9 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
       message += `\n*Total con descuento:* S/ ${total.toFixed(2)}`
     }
 
-    message += `\n*Envío:* (Por cotizar)\n\n*Datos del Cliente:*\nNombre: ${
-      formData.fullName
-    }\nDNI/CE: ${formData.idNumber}\nTeléfono: ${formData.phone}\nUbicación: ${
-      formData.department
-    }, ${formData.province}, ${formData.district}\nDirección: ${formData.address}\nReferencia: ${formData.reference}`
+    message += `\n*Envío:* (Por cotizar)\n\n*Datos del Cliente:*\nNombre: ${formData.fullName
+      }\nDNI/CE: ${formData.idNumber}\nTeléfono: ${formData.phone}\nUbicación: ${formData.department
+      }, ${formData.province}, ${formData.district}\nDirección: ${formData.address}\nReferencia: ${formData.reference}`
 
     // Encode the message for WhatsApp
     const encodedMessage = encodeURIComponent(message)
@@ -281,6 +281,8 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                   <span>Envío</span>
                   <span>(Por cotizar)</span>
                 </div>
+
+           
 
                 <Button className="w-full bg-blue-900 hover:bg-blue-800" onClick={handleWhatsAppCheckout}>
                   Completar Pedido por WhatsApp

@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation"
 import CartDrawer from "./cart-drawer"
 import CartNotification from "./cart-notification"
 
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isCartOpen, setIsCartOpen] = useState(false)

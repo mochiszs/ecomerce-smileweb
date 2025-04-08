@@ -7,16 +7,16 @@ import { Providers } from "./providers"
 import WhatsAppButton from "@/components/whatsapp-button"
 import Image from "next/image"
 import Link from "next/link"
+import Script from "next/script" // 👈 asegúrate de importar esto
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "SMILE MERCH - Merch de tus artistas favoritos",
   description: "Polos y pósters de calidad de la marca SMILE",
-    generator: 'v0.dev',
-    icons: {
-      icon: "/minilogitosmile.png", // Asegúrate de que este archivo está en la carpeta public/
-    },
+  icons: {
+    icon: "/minilogitosmile.png",
+  },
 }
 
 export default function RootLayout({
@@ -26,6 +26,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+      {/* Cargar el script de Google Analytics */}
+      <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16592582067"
+          strategy="afterInteractive" // Esto garantiza que el script se carga después de que la página esté interactiva
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16592582067');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} bg-black text-white`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <Providers>
@@ -60,8 +79,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'
-import { icons } from "lucide-react"

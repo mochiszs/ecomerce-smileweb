@@ -154,7 +154,7 @@ Referencia: ${formData.reference || "No especificada"}
                       <div className="flex flex-1 flex-col justify-between">
                         <div>
                           <h3 className="font-medium">{item.name}</h3>
-                          <p className="text-sm text-muted-foreground">{item.category}</p>
+                          <p className="text-sm text-muted-foreground">{product.category}</p>
                           {item.size && <p className="text-sm">Talla: {item.size}</p>}
                         </div>
                         <div className="flex items-center justify-between">
@@ -314,6 +314,8 @@ Referencia: ${formData.reference || "No especificada"}
                       <span>S/ {total.toFixed(2)} + envío</span>
                     </div>
 
+                    trackConversion();
+                    
                     <Button className="w-full" size="lg" onClick={handleCheckout}>
                       Finalizar compra
                     </Button>
