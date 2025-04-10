@@ -67,7 +67,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
   }
 
   const applyCoupon = () => {
-    if (couponCode.toUpperCase() === "SMILEPROMO15") {
+    if (couponCode.toUpperCase() === "ASD") {
       setDiscountApplied(true)
     } else {
       alert("Código de cupón inválido")
