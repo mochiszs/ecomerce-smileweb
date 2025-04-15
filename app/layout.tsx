@@ -7,7 +7,7 @@ import { Providers } from "./providers"
 import WhatsAppButton from "@/components/whatsapp-button"
 import Image from "next/image"
 import Link from "next/link"
-import Script from "next/script" // 👈 asegúrate de importar esto
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -27,16 +27,30 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-      {/* Cargar el script de Google Analytics */}
-      <Script
+        {/* Favicon clásico para navegadores y Google */}
+        <link rel="icon" href="/minilogitosmile.png" type="image/png" />
+
+        {/* JSON-LD: Datos estructurados para que Google reconozca el logo */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "SMILE MERCH",
+              "url": "https://www.smilemerch.com.pe",
+              "logo": "https://www.smilemerch.com.pe/minilogitosmile.png",
+            }),
+          }}
+        />
+
+        {/* Script de Google Ads / Google Tag */}
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-16592582067"
-          strategy="afterInteractive" // Esto garantiza que el script se carga después de que la página esté interactiva
-        />
-        <Script
-          id="google-analytics"
           strategy="afterInteractive"
-        >
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -46,7 +60,12 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${inter.className} bg-black text-white`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
           <Providers>
             <Header />
             {children}
