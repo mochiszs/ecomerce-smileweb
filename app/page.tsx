@@ -37,7 +37,7 @@ export default function Home() {
             <div className="relative rounded-lg overflow-hidden">
               <div className="aspect-video relative">
                 <Image
-                  src="/CYBER-SMILE-WEB.jpg"
+                  src="/PORTADA WEB MAYO.jpg"
                   alt="Aniversario Smile"
                   fill
                   className="object-cover"

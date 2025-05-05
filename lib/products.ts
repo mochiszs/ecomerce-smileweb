@@ -210,12 +210,30 @@ export const products: Product[] = [
 },
 {
   id: "polo-streetwear-25",
-  name: "TYLER, THE CREATOR - CHROMAKOPIA",
-  description: "Camiseta inspirada en TYLER, THE CREATOR - CHROMAKOPIA. Diseño minimalista y hecha de algodón de alta calidad para máxima comodidad.",
+  name: "TYLER THE CREATOR - CHROMAKOPIA",
+  description: "Camiseta inspirada en TYLER THE CREATOR - CHROMAKOPIA. Diseño minimalista y hecha de algodón de alta calidad para máxima comodidad.",
   price: 46,
   category: "Polo Streetwear",
   sizes: ["S", "M", "L"],
   images: ["/OVERSIZE/25 TYLER, THE CREATOR - CHROMAKOPIA/01.jpg", "/OVERSIZE/25 TYLER, THE CREATOR - CHROMAKOPIA/02.jpg"]
+},
+{
+  id: "polo-streetwear-26",
+  name: "THE STROKES - THE NEW ABNORMAL",
+  description: "Camiseta inspirada en THE STROKES - THE NEW ABNORMAL. Diseño minimalista y hecha de algodón de alta calidad para máxima comodidad.",
+  price: 46,
+  category: "Polo Streetwear",
+  sizes: ["S", "M", "L"],
+  images: ["/01. THE STROKES.jpg", "/02. THE STROKES.jpg"]
+},
+{
+  id: "polo-streetwear-27",
+  name: "TV GIRL - WHO REALLY CARES",
+  description: "Camiseta inspirada en TV GIRL - WHO REALLY CARES. Diseño minimalista y hecha de algodón de alta calidad para máxima comodidad.",
+  price: 46,
+  category: "Polo Streetwear",
+  sizes: ["S", "M", "L"],
+  images: ["/01. TV GIRL.jpg", "/02. TV GIRL.jpg"]
 },
 
 

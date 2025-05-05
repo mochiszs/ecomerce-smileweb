@@ -30,7 +30,7 @@ export default function RootLayout({
         {/* Favicon clásico para navegadores y Google */}
         <link rel="icon" href="/minilogitosmile.png" type="image/png" />
 
-        {/* JSON-LD: Datos estructurados para que Google reconozca el logo */}
+       
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

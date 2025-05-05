@@ -43,7 +43,7 @@ export default function CartPage() {
   const total = subtotal - discount
 
   const applyCoupon = () => {
-    if (couponCode.toUpperCase() === "SMILEPROMO15") {
+    if (couponCode.toUpperCase() === "ASD") {
       setDiscountApplied(true)
     } else {
       alert("Código de cupón inválido")
