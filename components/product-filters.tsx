@@ -68,7 +68,7 @@ export default function ProductFilters() {
         <div>
           <h3 className="text-sm font-medium mb-2">Categoría</h3>
           <div className="space-y-1">
-            {["", "polo-streetwear", "polo-basic", "baby-tees", "posters"].map((cat) => (
+            {["", "polo-streetwear", "polo-basic", "baby-tees", "posters","hoodies"].map((cat) => (
               <label key={cat} className="flex items-center">
                 <input
                   type="radio"

@@ -24,6 +24,7 @@ export default function Header() {
     { name: "Polos Basic", path: "/products?category=polo-basic" },
     { name: "Baby Tees", path: "/products?category=baby-tees" },
     { name: "Pósters", path: "/products?category=posters" },
+    { name: "Hoodies", path: "/products?category=hoodies" },
   ]
 
   return (
