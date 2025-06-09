@@ -480,7 +480,7 @@ export const products: Product[] = [
   id: "hoodie-1",
   name: "Cigarettes After Sex - Apocalypse",
   description: "Hoodie inspirado en APOCALYPSE de CIGARETTES AFTER SEX. Diseño minimalista y hecha de algodón de alta calidad para máxima comodidad.",
-  price: 72,
+  price: 76,
   category: "hoodies",
   sizes: ["S", "M", "L"],
   images: ["/Cigarettes After Sex - Apocalypse 1.jpg","/Cigarettes After Sex - Apocalypse 2.jpg","/Cigarettes After Sex - Apocalypse 3.jpg"]
@@ -489,7 +489,7 @@ export const products: Product[] = [
   id: "hoodie-2",
   name: "Joji - Smithereens",
   description: "Hoodie inspirado en Smithereens de Joji. Diseño minimalista y hecha de algodón de alta calidad para máxima comodidad.",
-  price: 72,
+  price: 76,
   category: "hoodies",
   sizes: ["S", "M", "L"],
   images: ["/Joji - Smithereens.jpg","/Joji - Smithereens02.jpg","/Joji - Smithereens03.jpg"]
